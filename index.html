@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta content="MyCarbonImpact" name="description">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+	<meta content="#9EC73B" name="theme-color">
+	<meta content="yes" name="apple-mobile-web-app-capable">
+	<meta content="black" name="apple-mobile-web-app-status-bar-style">
+	<meta content="MyCarbonImpact" name="apple-mobile-web-app-title">
+	<meta content="/images/tree-90x90.png" name="msapplication-TileImage">
+	<meta content="#9EC73B" name="msapplication-TileColor">
+	<link href="/css/app-style.css" rel="stylesheet">
+	<link href="/images/tree-90x90.png" rel="apple-touch-icon">
+	<link href="manifest.json" rel="manifest">
+	<link href="/images/favicon.ico" rel="shortcut icon">
+	<title>MyCarbonImpact</title>
+</head>
+<body>
+	<div class="hidden" id="installContainer">
+		<p>Install app</p><br>
+		<button id="butInstall" type="button">Install</button>
+	</div>
+	<div id="container">
+		<header>
+			<h1>MyCarbonImpact</h1>
+		</header>
+		<main>
+			<div class="hidden" id="confirm">
+				<p>You have an incomplete journey. Do you want to continue this journey?</p><button id="yes">Yes</button> <button id="no">No</button>
+			</div>
+			<div id="intro">
+				<button aria-label="History" id="history"><img alt="History" height="85" src="/images/history.webp" width="85"></button> <button aria-label="Help" id="Help"><img alt="Help" height="85" src="/images/help.webp" width="85"></button>
+			</div>
+			<div id="reason">
+				<p>Select your reason for travelling.</p><button aria-label="Business" class="reason" id="Business"><img alt="Business" height="85" src="/images/business.webp" width="85"></button> <button aria-label="Leisure" class="reason" id="Leisure"><img alt="Leisure" height="85" src="/images/leisure.webp" width="85"></button>
+				<p id="selectedReason"></p>
+			</div>
+			<div class="hidden" id="mode">
+				<p>Select your method of transport.</p><button aria-label="SmallCar" class="transport" id="SmallCar"><img alt="Small car" class="lazyload" data-src="/images/small-car.webp" height="85" src="/images/small-car.webp" width="85"></button> <button aria-label="MediumCar" class="transport" id="MediumCar"><img alt="Medium car" class="lazyload" data-src="/images/medium-car.webp" height="85" src="/images/medium-car.webp" width="85"></button> <button aria-label="LargeCar" class="transport" id="LargeCar"><img alt="Large car" class="lazyload" data-src="/images/large-car.webp" height="85" src="/images/large-car.webp" width="85"></button> <button aria-label="Bus" class="transport" id="Bus"><img alt="Bus" class="lazyload" data-src="/images/bus.webp" height="85" src="/images/bus.webp" width="85"></button> <button aria-label="Train" class="transport" id="Train"><img alt="Train" class="lazyload" data-src="/images/train.webp" height="85" src="/images/train.webp" width="85"></button> <button aria-label="Plane" class="transport" id="Plane"><img alt="Plane" class="lazyload" data-src="/images/plane.webp" height="85" src="/images/plane.webp" width="85"></button> <button aria-label="Ferry" class="transport" id="Ferry"><img alt="Ferry" class="lazyload" data-src="/images/ferry.webp" height="85" src="/images/ferry.webp" width="85"></button> <button aria-label="Subway" class="transport" id="Subway"><img alt="Subway" class="lazyload" data-src="/images/subway.webp" height="85" src="/images/subway.webp" width="85"></button> <button aria-label="Tram" class="transport" id="Tram"><img alt="Tram" class="lazyload" data-src="/images/tram.webp" height="85" src="/images/tram.webp" width="85"></button>
+				<p id="selectedMode"></p>
+			</div>
+			<p class="hidden" id="info"></p>
+			<p class="hidden" id="info2"></p>
+			<div class="hidden" id="mapholder"></div>
+			<p class="hidden" id="offline"></p>
+			<div class="hidden" id="controls">
+				<button aria-label="start" class="hidden" id="start"><img alt="Start" class="lazyload" data-src="/images/start.webp" height="85" src="/images/start.webp" width="85"></button> <button aria-label="stop" class="hidden" id="stop"><img alt="Stop" class="lazyload" data-src="/images/stop.webp" height="85" src="/images/stop.webp" width="85"></button>
+			</div>
+			<div class="hidden" id="historyPanel"></div>
+			<p class="hidden" id="helpPanel"></p>
+		</main>
+		<footer>
+			<em>&copy; 2022 SQA | Version 1.0</em>
+		</footer>
+	</div>
+	<script src="/js/app-main.js">
+	</script> 
+	<script async src="/js/lazysizes.min.js">
+	</script> 
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDIHWy5-4hBJv4btCz1TTdDsFdmpraCWyc">
+	</script>
+</body>
+</html>
